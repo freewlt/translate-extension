@@ -1,0 +1,93 @@
+/* content.css — styles for the floating selection-translation popup */
+
+#te-popup {
+  all: initial;
+  position: absolute;
+  z-index: 2147483647;
+  width: 280px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18), 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-size: 13px;
+  overflow: hidden;
+  line-height: 1.5;
+  color: #1e293b;
+}
+
+#te-popup .te-bar {
+  display: flex;
+  align-items: center;
+  padding: 8px 10px;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  gap: 6px;
+}
+
+#te-popup .te-btn {
+  all: unset;
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  transition: opacity 0.15s;
+}
+#te-popup .te-btn:hover { opacity: 0.85; }
+#te-popup .te-btn:disabled { opacity: 0.5; cursor: default; }
+
+#te-popup .te-translate-btn {
+  background: #ffffff;
+  color: #4f46e5;
+}
+#te-popup .te-close-btn {
+  margin-left: auto;
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  padding: 3px 8px;
+  font-size: 14px;
+}
+
+#te-popup .te-body {
+  padding: 10px 12px;
+}
+
+#te-popup .te-loading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #64748b;
+  font-size: 12px;
+}
+
+#te-popup .te-spinner {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid #e2e8f0;
+  border-top-color: #4f46e5;
+  border-radius: 50%;
+  animation: te-spin 0.7s linear infinite;
+  flex-shrink: 0;
+}
+@keyframes te-spin { to { transform: rotate(360deg); } }
+
+#te-popup .te-result {
+  color: #1e293b;
+  line-height: 1.6;
+  margin-bottom: 8px;
+  word-break: break-word;
+}
+
+#te-popup .te-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#te-popup .te-card-btn {
+  background: #4f46e5;
+  color: #fff;
+  border-radius: 6px;
+  padding: 5px 12px;
+  font-size: 11px;
+}
